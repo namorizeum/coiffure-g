@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{# {% extends 'layout-three-columns.html.twig' %} #}
+
+{% block title %}Page d'accueil{% endblock %}
+
+
+
+{% block body %}
+    <div {{stimulus_controller('say-hello')}}>
+        <input type="text" {{stimulus_target('say-hello', 'name')}}/>
+        <button {{stimulus_action('say-hello', 'greet')}}>Dire Bonjour</button>
+    <div {{stimulus_target('say-hello', 'output')}}>
+   
+{% endblock %}
+
